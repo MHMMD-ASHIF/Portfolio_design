@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+}
+
+.EducationDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.EducationContent {
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin-top: 80px;
+    margin-bottom: 15%;
+    height: max-content;
+}
+
+.EduButtons .button {
+    display: flex;
+    flex-direction: column;
+}
+
+.EducationSection h1 {
+    color: #fff;
+    line-height: 1.5;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.EducationSection h1::before {
+    content: "02.";
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 8px;
+    color: #64ffda;
+    font-weight: 500;
+}
+
+.EducationContent {
+    /* margin-top: 15%; */
+    margin-left: 50px;
+}
+
+.EducationSection h1::after {
+    content: "";
+    flex: 2;
+    opacity: 0.5;
+    height: .5px;
+    margin-top: 20px;
+    margin-left: 15px;
+    background-color: #a8b2d1aa;
+}
+
+.EduButtons .button button {
+    height: 50px;
+    background-color: transparent;
+    border: 0px;
+    font-size: 15px;
+    font-weight: 500;
+    border-left: 1px solid #a8b2d1aa;
+    color: #8892b0;
+    padding-left: 15px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    width: 170px;
+    text-align: left;
+    margin-right: 60px;
+    cursor: pointer;
+
+}
+
+.EduButtons .button button:hover {
+    background-color: #64ffda;
+    color: #000;
+    border-radius: 5px;
+
+}
+
+.EduButtons .button .active {
+    border-left: 4px solid #fff;
+    background-color: #64ffda;
+    border-radius: 3px;
+    color: #000;
+
+}
+
+.buttonDescription h3 {
+    font-size: 25px;
+    color: #fff;
+    margin-top: -5px;
+}
+.buttonDescription h3 a{
+    text-decoration: none;
+}
+.buttonDescription h3  span {
+    color: aquamarine;
+    text-decoration: none;
+    position: relative;
+    
+}
+.buttonDescription h3  span::after {
+    content: "";
+    position: absolute;
+    background-color: #64ffda;
+    height:1px;
+    width:0%;
+    z-index: 9;
+    left:0;
+    bottom: -5px;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+.buttonDescription h3 span:hover::after{
+    width: 100%;
+    
+}
+
+
+
+.buttonDescription h6 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+.buttonDescription .dur {
+    font-size: 15px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.buttonDescription .dec {
+    font-size: 15px;
+    text-align: justify;
+    display: flex;
+    line-height: 1.9;
+    margin-top: 20px;
+    max-width: 500px;
+}
+.buttonDescription .dec::before{
+    content: "▹";
+    position: relative;
+    left: 0px;
+    color: #64ffda;
+    line-height: 1.9;
+    margin-right: 10px;
+}
+
+
+@media(max-width:680px){
+    .EducationDiv{
+        display: block;
+    }
+    .AboutMeSecondary{
+        padding: 0px;
+    }
+    .EducationContent{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        margin-left: 5px;
+        margin-right: -25px;
+        
+    }
+    .EduButtons .button{
+        display: flex;
+        flex-direction: row;
+        overflow-y: auto;
+        margin-bottom: 50px;
+       
+    }
+    .EduButtons .button button{
+        border: 0px;
+        margin-right: 10px;
+        width: 200px;
+
+         
+    }
+    
+    .EducationSection h1{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .EducationDiv{
+        padding-left: 7.5%;
+        padding-right: 8.5%;
+    }
+    .buttonDescription .dec{
+        margin-right: 50px;
+
+    }
+    .EduButtons .button .active {
+        border: none;
+        border-bottom: 3px solid #64ffda;
+        background-color: transparent;
+        border-radius: 3px;
+        color: #fff;
+    
+    }
+    
+}

@@ -1,0 +1,94 @@
+.contactForm{
+    height: max-content;
+    margin-top: 90px;
+    
+}
+.contactForm h1{
+    color: rgb(243, 243, 243);
+    display: flex;
+    /* margin-bottom: 50px; */
+}
+.contactForm h1::before{
+    content: "04.";
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right:8px;
+    color: aquamarine;
+    font-weight: 500;
+
+}
+
+.contactForm h1::after{
+    content: "";
+    flex: 2;
+    opacity: 0.5;
+    margin-top: 5px;
+    height: .5px;
+    margin-top: 20px;
+    margin-left: 15px;
+    background-color: #a8b2d1aa;
+
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.contact .Head{
+    margin-top: 50px;
+    font-size: 40px;
+    color: #fff;
+}
+.contact .body{
+    max-width: 550px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+.contact .btn{
+    line-height: 10;
+}
+.contact button{
+    width: 200px;
+    height: 50px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.contact button:hover{
+    background-color: rgba(240, 248, 255, 0.133);
+}
+.design{
+    text-align: center;
+    line-height: 2;
+    font-size: 15px;
+    font-weight: none;
+    letter-spacing: 1.5px;
+}
+.design a{
+    cursor: pointer;
+    color: aquamarine;
+    text-decoration: none;
+    border-bottom: 5px solid white;
+}
+@media(max-width:960px){
+    .contact .Head{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:680px){
+    .contactForm{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+     
+    
+}

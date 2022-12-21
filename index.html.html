@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Anil</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/nav.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/home.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/aboutMeSecond.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/education.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/projectWorks.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/contact.css'>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c3d51c6cf4.js" crossorigin="anonymous"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 13px;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            border: 3px solid #0a192f;
+            background: #fff;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(245, 225, 225);
+        }
+
+        /* 
+        .hidden {
+            opacity: 0;
+            transition: all .4s;
+            height: max-content;
+            transform: translateY(100%); 
+            display: grid;
+            place-items: center;
+            align-items: center;
+          
+
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateX(0%);
+
+
+        } */
+        /* .loader_bg {
+            background: #020D1A;
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+
+        } */
+        .loader_bg {
+            background: #101010;
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .loader {
+
+            border-radius: 50%;
+            background-color: none;
+            border: 9px solid aquamarine;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            position: absolute;
+            top: calc(50vh - 75px);
+            left: calc(50vw - 75px);
+            animation: loader 1s linear infinite;
+            border-top: 9px solid #0a192f;
+        }
+
+
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+
+        }
+
+        /* .loader {
+            border: 0 solid transparent;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: calc(50vh - 75px);
+            left: calc(50vw - 75px)
+        } */
+        /* 
+        .loader::before,
+        .loader::after {
+            content: '';
+            border: 1em solid #64ffda;
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        } */
+
+
+
+        /* .loader_bg img {
+            width: 120px;
+            height: 120px;
+            animation: loader 1s ease-out .1s;
+
+        } */
+    </style>
+
+</head>
+
+<body id="body">
+    <nav class="navBar" id="navBar">
+
+
+        <div class="navItems">
+            <div class="logo">
+                <div class="h1Back">
+                    <a href="./index.html.html" style="text-decoration: none; color: #0a192f;">
+                        <h3 style="margin-top: 5px;">AG</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="navContents">
+
+                <input type="checkbox" id="check">
+                <label for="check" class="checkBtn">
+                    <img src="./asset/hamburger_final.png" class="hamburger"
+                        style="margin-top: 20px; width: 35px;height: 35px;">
+                </label>
+                <ul class="navbar-nav">
+
+                    <a href="#homeCont">
+                        <li>Home</li>
+                    </a>
+                    <a href="#AboutMeSec">
+                        <li>About</li>
+                    </a>
+                    <a href="#education">
+                        <li>Education</li>
+                    </a>
+                    <a href="#works">
+                        <li>Works</li>
+                    </a>
+                    <a href="#contact">
+                        <li>Contact</li>
+                    </a>
+
+                    <!-- <button class="btn">RESUME</button> -->
+                </ul>
+                <div class="hello"></div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="loader_bg" id="ld">
+        <div class="loader">
+
+            <!-- <img src="logo.png" title="Logo"> -->
+        </div>
+        <!-- <h1 style="color: rgb(145, 142, 142); text-align: center; margin-left: -70px;margin-top: -45px; position: fixed;" >AG</h1> -->
+    </div>
+
+    <main>
+
+
+
+        <section class="aboutMe hidden" id="homeCont">
+            <div class="overlay"></div>
+            <div class="aboutMeAllContents">
+                <div class="textContents">
+                    <div class="helloTitle">
+                        <h4>Hello</h4>
+                    </div>
+                    <div class="ownerName">
+                        <h2>I'm <span>Anil George.</span></h2>
+                    </div>
+                    <div class="AboutOwner">
+                        Highly capable and young minded postgraduate who works great,
+                        Both on own initiative and in teams and groups. Having recently
+                        graduated, I would like to explore new dimensions and for the further
+                        development of my skills.
+                    </div>
+
+                    <div class="HireMe">
+                        <a href="./asset/Anil_withScore.pdf" target="_blank"><button class="btnHire">Resume</button></a>
+                    </div>
+
+
+                    <div class="socialContact">
+                        <div class="facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="gitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="linkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ProfileImage">
+
+                    <div class="image">
+                        <img src="./asset/profile.png" alt="anil" class="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="AboutMeSecondary hidden" id="AboutMeSec">
+            <div class="second">
+                <h1>About Me</h1>
+
+
+                <div class="aboutTotalContent">
+                    <div class="AboutProfileImage">
+
+                        <div class="AboutImage">
+                            <img src="./asset/profile.png" alt="anil" class="img">
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <div class="paragraph">
+                            <p>Hello! I'm Anil George and I enjoy creating things that live on the mobile devices.
+                                My interest in mobile application development started back in 2022 — turns out hacking
+                                together a
+                                custom re-blog button taught me a lot about Dart and Flutter !</p>
+                            <p>I also recently joined a course that covers everything need to build a mobile application
+                                with Flutter and Dart.</p>
+                            <p>A hard-working, Detail-oriented, methodical professional and self-motivated Mobile
+                                Application Developer, Continuously developing, implementing and
+                                adopting new technologies to maximize development efficiency and innovate applications.
+                                Skills involve design, development, implement and enhance highly optimized
+                                cross-platform
+                                hybrid mobile apps and method to meet both interval and external analysis requirements.
+                            </p>
+
+                            <p>Here are a few technologies I’ve been working with recently:</p>
+                        </div>
+
+                        <ul class="skills">
+                            <div class="one">
+                                <li class="li1">Dart</li>
+                                <li class="li1">HTML</li>
+                                <li class="li1">SQL</li>
+                            </div>
+                            <div class="two">
+                                <li class="li1">Flutter</li>
+                                <li class="li1">CSS</li>
+                                <li class="li1">Adobe XD</li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="EducationSection" style="position: relative;">
+                <h1>Education</h1>
+
+                <div class="EducationDiv" id="education">
+                    <div class="EducationContent">
+                        <div class="EduButtons">
+                            <div class="button" id="mm">
+                                <button class="Flutter active">Flutter</button>
+                                <button class="Post">Post Graduation</button>
+                                <button class="Under">Under Graduation</button>
+                                <button class="Schooling">Schooling</button>
+                            </div>
+                        </div>
+                        <div class="buttonDescription">
+                            <div class="flutterDes" id="flutterCon">
+                                <h3>Mobility Development <a href=""><span class="span">@ Luminar</span></a> </h3>
+                                <h6>Flutter Development</h6>
+                                <p class="dur">July 2022 - present</p>
+
+                                <p class="dec">Flutter provides an easy to use way of establishing the communication
+                                    between platform-native code and Dart through platform channels.</p>
+                                <p class="dec">This way, I can implement anything that a native app can do on a Flutter
+                                    app, with just a little extra effort on the native side.</p>
+                                <p class="dec">The future of flutter development is bright, With the large community
+                                    support enhance my dreams into action.</p>
+                            </div>
+                            <div class="postDes" style="display: none;" id="pgCon">
+                                <h3>Post graduation <span>@ St.Stephen's</span></h3>
+                                <h6>Computer Science</h6>
+                                <p class="dur">June 2019 - September 2021</p>
+
+                                <p class="dec">I understood the concept of teamwork and learn the importance of
+                                    communication and go through a comprehensive learning</p>
+                                <p class="dec">Subjects inclusive of Python, php, HTML, Database management data mining,
+                                    OOP's concepts and computational mathematics.</p>
+
+                            </div>
+                            <div class="underDes" style="display: none;" id="ugCon">
+                                <h3>Under Graduation <span>@ SNGC</span></h3>
+                                <h6>Computer Science</h6>
+                                <p class="dur">June 2016 - April 2019</p>
+
+                                <p class="dec">I understood the concept of teamwork and learn the importance of
+                                    communication and go through a comprehensive learning</p>
+
+                                <p class="dec">Subjects inclusive of Database management, Java, c++, data mining, and
+                                    computational mathematics.</p>
+
+                            </div>
+                            <div class="scholingDes" style="display: none;" id="SchoolCon">
+                                <h3>Schooling <span>@ AMHSS</span></h3>
+                                <h6>Higher Secondary</h6>
+                                <p class="dur">June 2014 - March 2016</p>
+
+                                <p class="dec">I learn Greater Sense of Discipline and education help to increase my
+                                    confidence level</p>
+                                <p class="dec">Subjects inclusive of Mathematics, Biology science, physics, chemistry
+                                    with decent grade</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projectWorks" id="works">
+
+                <h1>Project Works</h1>
+                <div class="ProjectContents">
+                    <div class="card">
+                        <div class="line">
+                            <div class="loader"></div>
+                        </div>
+                        <div class="innerCard">
+                            <div class="cardContent">
+                                <i class="fa-solid fa-folder"></i>
+
+                                <div class="divHead">
+                                    <h3>Turf Booking System</h3>
+                                </div>
+                                <div class="divBody">
+                                    <p>Turf Booking is a network based application designed in Flutter. It was intended
+                                        to replace the manual process of transactions such as the booking of slots and
+                                        payment.</p>
+                                </div>
+                                <div class="divFoot">
+                                    <ul>
+                                        <li>Dark</li>
+                                        <li>Flutter</li>
+                                        <li>Android Studio</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="back">
+                                <div class="img">
+                                    <img src="./asset/launch.png">
+                                </div>
+                                <div class="launch">
+                                    <h4>Launch</h4>
+                                </div>
+                                <div class="btn">
+                                    <a href=""><button class="btn"><i class="fa-brands fa-github"></i></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="line" style="background-color: dodgerblue;"></div>
+                        <div class="innerCard">
+                            <div class="cardContent">
+                                <i class="fa-solid fa-folder" style="color: dodgerblue;"></i>
+
+                                <div class="divHead">
+                                    <h3>E-Learning Management</h3>
+                                </div>
+                                <div class="divBody">
+                                    <p>The E-learning has been developed to override the problems prevailing in the
+                                        practicing manual System.
+                                        It will eliminate and reduce the hardships faced by existing system.
+                                    </p>
+                                </div>
+
+                                <div class="divFoot">
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JS</li>
+                                        <li>Python</li>
+                                        <li>Django</li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="back">
+                                <div class="img">
+                                    <img src="./asset/launch.png">
+                                </div>
+                                <div class="launch">
+                                    <h4>Launch</h4>
+                                </div>
+                                <div class="btn">
+                                    <a href=""><button class="btn"><i class="fa-brands fa-github"></i></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="line" style="background-color: #cd0505;"></div>
+                        <div class="innerCard">
+                            <div class="cardContent">
+                                <i class="fa-solid fa-folder" style="color: #cd0505;"></i>
+
+                                <div class="divHead">
+                                    <h3>Face Mask Detection</h3>
+                                </div>
+                                <div class="divBody">
+                                    <p>The objectives of this project is to detect the presence of face masks for safety
+                                        purposes due to the outbreak of covid-19 using Convolutions Neural Network.</p>
+
+                                </div>
+                                <div class="divFoot">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>Tkinter</li>
+                                        <li>VS code</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                            <div class="back">
+                                <div class="img">
+                                    <img src="./asset/launch.png">
+                                </div>
+                                <div class="launch">
+                                    <h4>Launch</h4>
+                                </div>
+                                <div class="btn">
+                                    <a href=""><button class="btn"><i class="fa-brands fa-github"></i></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <div class="contactForm" id="contact">
+                <h1>Contact</h1>
+
+                <div class="contact">
+                    <div class="Head">
+                        <h2>Get in Touch</h2>
+                    </div>
+                    <div class="body">
+                        <p>Seeking an entry-level opportunity an estimated organization where I can utilize my skills
+                            and enhance learning in the field of work capable of mastering new technologies.</p>
+                    </div>
+                    <div class="btn">
+                        <a href="mailto:anil.geov@gmail.com" target="_blank"><button>Say Hello</button></a>
+                    </div>
+                </div>
+                <div class="design">
+                    <a>
+                        <a href="./index.html.html" style="text-decoration: none;"><h6>Designed by Anil George</h6></a>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                else {
+                    entry.target.classList.remove('show');
+                }
+            })
+        });
+        const hiddenElement = document.querySelectorAll('.hidden');
+        hiddenElement.forEach((el) => observer.observe(el));
+    </script> -->
+
+    <!-- <script>
+        let section=document.querySelector('section');
+        window.addEventListener('scroll', function(){
+            let value=window.scrollY;
+            section.style.clipPath = "circle("+value+"px at center center)";
+        })
+    </script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/eduButtonAct.js"></script>
+     <script type="text/javascript" src="./js/eduContentShow.js" ></script>
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('body').addClass("loaded");
+                $('.loader_bg').fadeToggle();
+                $('.loader').fadeToggle();
+
+            }, 1500);
+        })
+    </script>
+
+
+    <script type="text/javascript" src="./js/navHide.js"></script>
+
+    <script>
+
+        $(".navContents ul > a").click(function (e) {
+            $(".navContents > #check").prop('checked', false)
+            console.log('hello')
+
+        })
+    </script>
+
+    <script>
+        function initialSetup() {
+            var st = document.getElementById('body');
+            // var ld = document.getElementById('ld')
+            if (st != null) {
+
+                st.style.overflow = 'hidden'
+                setTimeout(function () {
+                    st.style.overflow = 'auto';
+
+                }, 1500);
+            }
+        }
+
+
+        initialSetup();
+    </script>
+
+
+</body>
+
+</html>

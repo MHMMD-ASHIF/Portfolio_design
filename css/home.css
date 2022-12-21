@@ -1,0 +1,333 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    box-sizing: border-box;
+
+
+}
+
+:root {
+
+    --bg-color: #fff;
+    --green: #000;
+    --slate: #CCD6F6;
+    --light-slate: #7c7c7d;
+
+
+
+}
+
+@font-face {
+    font-family: circular;
+    src: url(../fonts/CircularStd-Medium.otf);
+}
+
+body {
+    margin: 0px;
+    font-family: circular;
+ 
+}
+
+/* section {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: max-content;
+    margin-bottom: 15%;
+    padding-top: 50px;
+  
+    opacity: 1;
+
+    background-color: var(--bg-color);
+
+} */
+/* .aboutMe{
+   
+} */
+.aboutMeAllContents {
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: max-content;
+    margin-bottom: 20%;
+    padding-top: 50px;
+    background-color: var(--bg-color);
+    opacity: 1;
+ 
+    
+}
+
+/* .overlay{
+    width: 100%;
+    height: 100px;
+    z-index: 4;
+    opacity: .1;
+    background-color: #000;
+} */
+
+
+/* .aboutMeAllContents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 200vh;
+
+
+} */
+
+.textContents {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+    flex-wrap: wrap;
+    color: var(--light-slate);
+
+
+
+}
+
+.textContents .helloTitle {
+
+    line-height: 9;
+    margin-top: 50px;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--green);
+}
+
+.textContents .ownerName {
+    margin-top: -120px;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+}
+
+.textContents .ownerName span {
+    color: var(--green);
+    height: max-content;
+    width: max-content;
+    position: relative;
+    overflow-y: hidden;
+    z-index: 1;
+
+}
+
+.textContents .ownerName span::after {
+    content: "";
+    position: absolute;
+    height: 112%;
+    width: 100%;
+    border-left: 2px solid #000;
+    background-color: var(--bg-color);
+    left: 0;
+    z-index: 1;
+    animation: slide 3s .1s infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    } 
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.textContents .AboutOwner {
+
+    margin-top: -20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 100px;
+    line-height: 1.5;
+}
+
+.textContents .HireMe {
+    line-height: 6;
+    margin-top: 30px;
+}
+
+.textContents button {
+    width: 170px;
+    height: 50px;
+    border: 1px solid var(--green);
+
+    background: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--green);
+    cursor: pointer;
+}
+.textContents button:hover{
+    background-color: rgba(0, 0, 0, 0.114);
+
+}
+
+
+.textContents .socialContact {
+    display: flex;
+    font-size: 18px;
+    line-height: 6;
+
+}
+
+.textContents .socialContact i {
+    color: var(--light-slate);
+    margin-right: 10px;
+    border: 1px dashed var(--green);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.ProfileImage {
+    flex: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    z-index: 4;
+
+
+
+}
+
+.ProfileImage .image {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+
+.ProfileImage .image img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    mix-blend-mode: darken;
+    object-fit: cover;
+    filter: grayscale(80%) contrast(1);
+
+
+}
+
+.ProfileImage .image::before {
+    background: var(--slate);
+    position: absolute;
+    border-radius: 50%;
+    content: '';
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    bottom: 1%;
+    left: 0;
+    top: 0;
+}
+
+.ProfileImage img:hover {
+    mix-blend-mode: normal;
+    object-fit: cover;
+    filter: grayscale(0%) contrast(1);
+
+}
+
+@media(max-width:1000px) {
+    .aboutMeAllContents {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ProfileImage {
+        order: 2;
+    }
+
+    .textContents {
+        order: 1;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .ProfileImage .image img {
+        width: 450px;
+        height: 450px;
+
+    }
+
+    .ProfileImage .image {
+        width: 450px;
+        height: 450px;
+
+    }
+
+}
+
+@media(max-width:650px) {
+    .textContents .ownerName {
+        font-size: 25px;
+        padding-right: 10px;
+    }
+
+    .textContents .AboutOwner {
+        margin-right: 60px;
+    }
+
+}
+
+@media(max-width:480px) {
+    .textContents .ownerName {
+        font-size: 20px;
+        padding-right: 10px;
+    }
+
+    .textContents .helloTitle {
+
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+
+    .textContents .ownerName {
+        margin-bottom: 20px;
+
+    }
+
+    .textContents .AboutOwner {
+        margin-right: 40px;
+
+    }
+
+    .ProfileImage .image img {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .ProfileImage .image {
+        width: 300px;
+        height: 300px;
+        margin-top: -90px;
+
+    }
+
+}

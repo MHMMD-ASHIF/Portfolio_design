@@ -56,12 +56,12 @@ nav {
 }
 
 .navItems .logo .h1Back {
-    background-color: #64ffda;
-    color: #222426;
+     background-color: #64ffda;
+    color: #222426; 
     width: 35px;
     height: 35px;
     display: flex;
-    border-radius: 50%;
+    border-radius: 50%; 
     padding: 5px;
     text-align: center;
     box-shadow: 1.5px 1.5px 2px var(--shadow);
